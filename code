@@ -1,0 +1,15 @@
+numero_secreto=$((RANDOM % 10 + 1))
+while true; do
+  echo "Adivina el numero del 1 al 10"
+  read numero_adivinado
+  if [[ $numero_adivinado -eq $numero_secreto ]]; then
+   echo "felicidades has adivinado el numero has ganado el juego :D"
+   break
+  else
+   if [[ $numero_adivinado -lt $numero_secreto ]]; then
+    echo "fallate el numero es mas grande"
+   else
+    echo "fallate el numero es mas pqño"
+   fi
+  fi
+done
